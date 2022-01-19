@@ -23,6 +23,7 @@ module.exports = {
 	},
 
 	// GoogleLDAPAuth (optimized for google auth)
+	/*
 	authentication: 'GoogleLDAPAuth',
 	authenticationOptions: {
 		base: 'dc=hokify,dc=com',
@@ -32,6 +33,8 @@ module.exports = {
 			certFile: 'ldap.gsuite.crt',
 		},
 	},
+
+	*/
 
 	/** LDAP AUTH 
 	authentication: 'LDAPAuth',
@@ -74,4 +77,14 @@ module.exports = {
 		url: 'https://my-website.com/api/backend-login'
 	}
 	*/
+
+		
+	authentication: 'StaticAuth',
+	authenticationOptions: {
+		validCredentials: [
+			{ username: 'test', password: 'pwd' },
+			{ username: 'user1', password: 'password' },
+			{ username: 'admin', password: 'cool' }
+		]
+	}
 };
